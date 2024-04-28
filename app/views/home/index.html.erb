@@ -1,0 +1,37 @@
+<div class='battlefield'>
+  <div class='team_container left'>
+  <%- @team1.each do |character| %>
+  <div>
+    <%= image_tag character.unit%>
+  </div>
+  <% end %>
+  </div>
+  <div class='team_container right'>
+  <%- @team2.each do |character| %>
+  <div>
+    <%= image_tag character.unit%>
+  </div>
+  <% end %>
+  </div>
+</div>
+
+<div class='controls'>
+  <div class='controls_container'>
+    <ul>
+      <li><%= link_to 'Add Mage', '/add-mage' %></li>
+      <li><%= link_to 'Add Knight', '/add-knight' %></li>
+    </ul>
+    <ul>
+      <li><%= link_to '❗❗Ульта❗❗', '/first-team-ultimate-attack' %></li>
+    </ul>
+  </div>
+  <div class='controls_container'>
+    <ul>
+      <li><%= link_to 'Add Medusa', '/add-medusa' %></li>
+      <li><%= link_to 'Add Jinn', '/add-jinn' %></li>
+    </ul> 
+    <ul>
+      <li><%= link_to '❗❗Ульта❗❗', '/second-team-ultimate-attack' %></li>
+    </ul>
+  </div>
+</div>        
